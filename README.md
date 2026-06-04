@@ -1,6 +1,7 @@
 # SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior
 
-<img width="1859" height="846" alt="image" src="https://github.com/user-attachments/assets/eeb07d24-f2b6-40ab-9304-bc5a9b0998a5" />
+<img width="1859" height="846" alt="image" src="https://github.com/user-attachments/assets/f5fb71ec-24d7-42a8-9334-2f0bfd20db32" />
+
 
 > **SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior**  
 > [Mingyue Cui](https://github.com/Mingyuee88), [Linghui Shen](https://github.com/LinghuiiShen), [Xingyi Yang](https://adamdad.github.io/)  
