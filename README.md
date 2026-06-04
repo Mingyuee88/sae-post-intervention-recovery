@@ -114,7 +114,7 @@ For safety-relevant refusal experiments, the public release includes aggregate s
 
 ## Acknowledgements
 
-This codebase builds on and adapts infrastructure from SAEBench and Obfuscated Activations / OABD. See `ACKNOWLEDGEMENTS.md` and `docs/THIRD_PARTY.md` for details.
+This codebase builds on and adapts infrastructure from SAEBench and Obfuscated Activations / OABD. See `ACKNOWLEDGEMENTS.md` for details.
 
 ## Citation
 ```bibtex
