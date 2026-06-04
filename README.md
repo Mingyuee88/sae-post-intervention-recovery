@@ -1,8 +1,20 @@
-# SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior
+# SAE Interventions are Unreliable
+
+## Post-Intervention Recovery of Suppressed Behavior
+![Overview of post-intervention recovery](assets/overview.svg)
+
+> Mingyue Cui, Linghui Shen, Xingyi Yang  
+> [AFFILIATION TO ADD]  
+> Paper: coming soon | Code: https://github.com/Mingyuee88/sae-post-intervention-recovery
 
 This repository contains the public code and sanitized artifacts for the paper **"SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior"**.
 
 The central question is: after an SAE feature clamp has already suppressed a behavior, can the behavior still be recovered from the defended residual state while the clamped SAE features remain close to their defended values?
+
+In short, this project tests whether SAE feature interventions form reliable behavioral bottlenecks. Across latent-level, unlearning, circuit, and refusal settings, we intervene on model activations, then ask whether a constrained recovery direction can restore the suppressed behavior without simply undoing the clamped SAE features.
+<img width="917" height="563" alt="image" src="https://github.com/user-attachments/assets/f1a5b20f-efb2-4dd1-9e22-5cbbfb3b3912" />
+
+
 
 ## What Is Included
 
@@ -42,6 +54,7 @@ For full experiments, install the experiment extras:
 ```bash
 pip install -e ".[experiments,dev]"
 ```
+
 ## External Sources
 
 This repository does not redistribute model weights, SAE weights, or benchmark datasets. Download them from the original sources and comply with their terms.
@@ -59,6 +72,8 @@ This repository does not redistribute model weights, SAE weights, or benchmark d
 | IOI | Official IOI dataset/code source from Easy-Transformer | https://github.com/redwoodresearch/Easy-Transformer |
 
 ## Quick Start
+
+![Experiment map](assets/experiment_map.svg)
 
 ### 1. TPP latent-level recovery
 
@@ -114,7 +129,7 @@ For safety-relevant refusal experiments, the public release includes aggregate s
 
 ## Acknowledgements
 
-This codebase builds on and adapts infrastructure from SAEBench and Obfuscated Activations / OABD. See `ACKNOWLEDGEMENTS.md` for details.
+This codebase builds on and adapts infrastructure from SAEBench, Obfuscated Activations / OABD, and the Easy-Transformer IOI dataset code. See `ACKNOWLEDGEMENTS.md` for details.
 
 ## Citation
 ```bibtex
