@@ -385,3 +385,80 @@ figcaption {
     flex-direction: column;
   }
 }
+/* BibTeX copy button: top-right blue button */
+.citation-section .container {
+  position: relative;
+}
+
+.citation-section .citation-header {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.citation-section .citation-header h2 {
+  margin: 0 0 18px;
+  padding-right: 170px;
+}
+
+.citation-section .copy-button {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 112px;
+  min-height: 50px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 16px;
+  color: #ffffff;
+  background: #2563eb;
+  font: inherit;
+  font-size: 1.02rem;
+  font-weight: 750;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.26);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+.citation-section .copy-button::before {
+  content: "";
+  width: 18px;
+  height: 22px;
+  display: inline-block;
+  background:
+    linear-gradient(#ffffff, #ffffff) 6px 0 / 11px 15px no-repeat,
+    linear-gradient(#ffffff, #ffffff) 0 6px / 11px 15px no-repeat;
+  -webkit-mask:
+    linear-gradient(#000 0 0) 6px 0 / 11px 15px no-repeat,
+    linear-gradient(#000 0 0) 0 6px / 11px 15px no-repeat;
+  mask:
+    linear-gradient(#000 0 0) 6px 0 / 11px 15px no-repeat,
+    linear-gradient(#000 0 0) 0 6px / 11px 15px no-repeat;
+  border-radius: 2px;
+}
+
+.citation-section .copy-button:hover {
+  background: #1d4ed8;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.32);
+  transform: translateY(-1px);
+}
+
+.citation-section .copy-button.copied {
+  background: #16a34a;
+  box-shadow: 0 10px 24px rgba(22, 163, 74, 0.24);
+}
+
+@media (max-width: 520px) {
+  .citation-section .copy-button {
+    position: static;
+    margin-bottom: 14px;
+  }
+
+  .citation-section .citation-header h2 {
+    padding-right: 0;
+  }
+}
