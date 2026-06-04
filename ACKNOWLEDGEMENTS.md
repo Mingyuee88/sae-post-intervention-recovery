@@ -5,7 +5,7 @@ This repository contains research code for post-intervention recovery of SAE-bas
 ## Upstream repositories
 
 - **SAEBench**: https://github.com/adamkarvonen/SAEBench
-  - Used as the basis for SAE benchmark evaluation infrastructure, especially the official TPP-related workflow.
+  - Used as the basis for SAE benchmark evaluation infrastructure, especially the official TPP and Unlearning-related workflow.
   - Our release includes paper-specific recovery adapters and sanitized outputs rather than a full vendored upstream checkout.
 
 - **Obfuscated Activations / OABD**: https://github.com/LukeBailey181/obfuscated-activations
@@ -27,4 +27,4 @@ This repository contains research code for post-intervention recovery of SAE-bas
 
 ## Citation notes
 
-When using this repository, please cite the accompanying paper and acknowledge the upstream repositories above where relevant. Replace the placeholder citation in `CITATION.cff` once the paper has an arXiv ID, conference URL, or DOI.
+When using this repository, please cite the accompanying paper and acknowledge the upstream repositories above where relevant. 
