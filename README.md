@@ -11,7 +11,6 @@ The central question is: after an SAE feature clamp has already suppressed a beh
 - Cross-layer Jacobian-projected recovery for refusal-feature clamps.
 - Final experiment code for TPP, WMDP-Bio unlearning, IOI, and refusal recovery.
 - Sanitized aggregate results and redacted manifests used by the paper.
-- Release-safety checks that block raw outputs, private paths, credentials, and bulky model artifacts.
 
 ## Repository Map
 
