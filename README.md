@@ -1,9 +1,8 @@
-# SAE Interventions are Unreliable
-
-## Post-Intervention Recovery of Suppressed Behavior
+# SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior
 ![Overview of post-intervention recovery](assets/overview.svg)
 
-> [Mingyue Cui](https://github.com/Mingyuee88), [Linghui Shen](https://github.com/LinghuiiShen), [Xingyi Yang](https://adamdad.github.io/)
+> **SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior**  
+> [Mingyue Cui](https://github.com/Mingyuee88), [Linghui Shen](https://github.com/LinghuiiShen), [Xingyi Yang](https://adamdad.github.io/)  
 > The Hong Kong Polytechnic University  
 > 📄 Paper coming soon | 💻 [[Code]](https://github.com/Mingyuee88/sae-post-intervention-recovery)
 
