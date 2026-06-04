@@ -110,7 +110,7 @@ See `SAFETY.md` and `docs/RELEASE_CHECKLIST.md` before publishing a GitHub relea
 This codebase builds on and adapts infrastructure from SAEBench and Obfuscated Activations / OABD. See `ACKNOWLEDGEMENTS.md` and `docs/THIRD_PARTY.md` for details.
 
 ## Citation
-
+```bibtex
 @misc{cui2026saeinterventionsunreliable,
       title={SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior},
       author={Mingyue Cui and Linghui Shen and Xingyi Yang},
@@ -120,3 +120,4 @@ This codebase builds on and adapts infrastructure from SAEBench and Obfuscated A
       primaryClass={cs.LG},
       url={https://arxiv.org/abs/xxxx.xxxxx}
 }
+```
