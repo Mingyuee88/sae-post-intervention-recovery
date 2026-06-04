@@ -618,3 +618,133 @@ figcaption {
     padding: 10px;
   }
 }
+/* ================================
+   Key Results: large readable cards
+   ================================ */
+
+.results-section {
+  padding: 92px 0;
+}
+
+.results-section .results-wide {
+  width: min(96vw, 1560px);
+  max-width: 1560px;
+}
+
+.results-section h2 {
+  max-width: 1180px;
+  margin-bottom: 44px;
+}
+
+/* One large card per row */
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  margin-top: 0;
+}
+
+/* Horizontal card layout */
+.result-card {
+  display: grid;
+  grid-template-columns: minmax(720px, 1.45fr) minmax(360px, 0.75fr);
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 16px 42px rgba(28, 42, 72, 0.08);
+}
+
+/* Large clickable image area */
+.result-image-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  padding: 28px;
+  background: #fbfcff;
+  border-right: 1px solid var(--line);
+  cursor: zoom-in;
+  text-decoration: none;
+}
+
+.result-image-link:hover {
+  text-decoration: none;
+}
+
+.result-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+/* Text block */
+.result-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 38px;
+}
+
+.result-copy h3 {
+  margin: 0 0 18px;
+  font-size: clamp(1.35rem, 1.6vw, 1.8rem);
+  line-height: 1.18;
+}
+
+.result-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 1.18vw, 1.25rem);
+  line-height: 1.65;
+}
+
+/* Medium screens: stack image above text */
+@media (max-width: 1180px) {
+  .result-card {
+    grid-template-columns: 1fr;
+  }
+
+  .result-image-link {
+    min-height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .result-card img {
+    max-height: none;
+  }
+
+  .result-copy {
+    padding: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .results-section {
+    padding: 56px 0;
+  }
+
+  .results-section .results-wide {
+    width: min(100% - 28px, 100%);
+  }
+
+  .result-image-link {
+    padding: 10px;
+  }
+
+  .result-copy {
+    padding: 22px;
+  }
+
+  .result-copy p {
+    font-size: 1rem;
+  }
+}
