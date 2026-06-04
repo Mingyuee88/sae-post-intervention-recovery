@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Project page for SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior.">
+  <meta name="keywords" content="sparse autoencoders, SAE, mechanistic interpretability, latent-space defenses, refusal, recovery">
+  <meta property="og:title" content="SAE Interventions are Unreliable">
+  <meta property="og:description" content="Post-intervention recovery shows that SAE feature clamps can suppress behavior without eliminating recoverable paths to it.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="static/images/defense_large.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>SAE Interventions are Unreliable</title>
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Sparse Autoencoders · Latent-Space Safety · Post-Intervention Recovery</p>
+        <h1>SAE Interventions are Unreliable:<br><span>Post-Intervention Recovery of Suppressed Behavior</span></h1>
+        <p class="authors">
+          <a href="https://github.com/Mingyuee88">Mingyue Cui</a>,
+          <a href="https://github.com/LinghuiiShen">Linghui Shen</a>,
+          <a href="https://adamdad.github.io/">Xingyi Yang</a>
+        </p>
+        <p class="affiliation">The Hong Kong Polytechnic University</p>
+        <div class="button-row" aria-label="Project links">
+          <a class="button primary" href="static/pdf/SAE_preprint.pdf">Paper</a>
+          <a class="button" href="https://github.com/Mingyuee88/sae-post-intervention-recovery">Code</a>
+          <a class="button" href="https://arxiv.org/abs/xxxx.xxxxx">arXiv</a>
+        </div>
+        <figure class="teaser">
+          <img src="static/images/defense_large.png" alt="Post-intervention recovery framework">
+          <figcaption>
+            Starting from a defended residual state, constrained residual updates can restore the suppressed behavior while the SAE clamp remains active.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section abstract-section" id="abstract">
+      <div class="container narrow">
+        <h2>Abstract</h2>
+        <p>
+          Sparse Autoencoders decompose residual-stream activations into interpretable features, making them attractive handles for monitoring and intervention.
+          Recent latent-space defenses often assume that clamping identified unsafe SAE features reliably prevents model misbehavior.
+          We show that this intervention success can hide a recoverable failure mode: the clamp may block one visible route to a behavior without eliminating the behavior itself.
+        </p>
+        <p>
+          We formulate <strong>post-intervention recovery</strong> as a constrained residual-space optimization problem.
+          Starting from the actively clamped residual state, we optimize perturbations that recover the pre-intervention behavior while keeping defended SAE features close to their post-clamp values.
+          Across TPP, WMDP-Bio unlearning, IOI, and refusal steering experiments, the stress test reveals recoverable behavior despite successful feature-level intervention.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="core-idea">
+      <div class="container split">
+        <div>
+          <p class="section-kicker">Core Idea</p>
+          <h2>Feature-level control is not the same as behavioral completeness.</h2>
+          <p>
+            A selected SAE feature set can be a useful causal handle: clamping it changes behavior.
+            But a stronger question matters for safety: after the clamp is active, is the behavior actually eliminated?
+            Post-intervention recovery tests this by searching from the defended residual state, not by hiding from the monitor before intervention.
+          </p>
+          <p>
+            The recovery path is constrained with encoder-orthogonal projected updates for single-layer settings and feature-map Jacobian projection for cross-layer refusal clamps.
+            This discourages the trivial explanation that recovery simply reopens the clamped features.
+          </p>
+        </div>
+        <div class="equation-panel" aria-label="Recovery objective summary">
+          <div class="equation-line">defended state: h<sub>0</sub> = I<sub>S,c</sub>(h)</div>
+          <div class="equation-line">recovered state: h<sub>rec</sub> = h<sub>0</sub> + Δ</div>
+          <div class="equation-rule"></div>
+          <div class="equation-line">recover behavior</div>
+          <div class="equation-line">preserve defended SAE features</div>
+          <div class="equation-line">bound perturbation size</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results-section" id="results">
+      <div class="container">
+        <p class="section-kicker">Key Results</p>
+        <h2>Suppressed behavior remains recoverable across four settings.</h2>
+        <div class="result-grid">
+          <article class="result-card">
+            <img src="static/images/tpp_tradeoff_scatter.png" alt="TPP recovery-reactivation trade-off">
+            <div class="result-copy">
+              <h3>TPP latent-level recovery</h3>
+              <p>Encoder-projected recovery preserves <strong>74.9%</strong> target-mean recovery while reducing defended-feature reactivation to <strong>0.002</strong>.</p>
+            </div>
+          </article>
+          <article class="result-card">
+            <img src="static/images/unlearning_oabd_comparison.png" alt="WMDP-Bio unlearning recovery comparison">
+            <div class="result-copy">
+              <h3>WMDP-Bio unlearning</h3>
+              <p>Recovery restores <strong>90/91</strong> strict valid answer-choice flips while keeping measured clamp-feature drift at zero.</p>
+            </div>
+          </article>
+          <article class="result-card">
+            <img src="static/images/ioi.png" alt="IOI recovery under fixed SAE clamp">
+            <div class="result-copy">
+              <h3>IOI circuit-level recovery</h3>
+              <p>Both recovery variants restore all <strong>37</strong> valid IOI flips; encoder projection does so with lower drift and less feature reactivation.</p>
+            </div>
+          </article>
+          <article class="result-card">
+            <img src="static/images/refusal_summary.png" alt="Refusal recovery preservation trade-off">
+            <div class="result-copy">
+              <h3>Refusal recovery</h3>
+              <p>Jacobian-projected recovery restores <strong>23/24</strong> strict-valid AdvBench prompts while keeping defended-feature movement much smaller than suffix baselines.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section attribution-section" id="attribution">
+      <div class="container split attribution-split">
+        <div>
+          <p class="section-kicker">Recovery-Path Attribution</p>
+          <h2>The SAE reconstruction residual carries the recovery path.</h2>
+          <p>
+            Replaying only the SAE residual nearly matches full recovery, while clamped-feature and non-clamped-feature replays largely fail.
+            This suggests that the behavior is not primarily returning through visible SAE latents or by reopening the defended features.
+          </p>
+          <p>
+            The result reframes reconstruction error in safety-critical intervention settings: even an SAE-unexplained component can contain behaviorally sufficient degrees of freedom.
+          </p>
+        </div>
+        <figure class="figure-panel">
+          <img src="static/images/refusal_attribution.png" alt="Recovery carried by the SAE reconstruction residual">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section citation-section" id="citation">
+      <div class="container narrow">
+        <h2>BibTeX</h2>
+        <pre><code>@misc{cui2026saeinterventionsunreliable,
+  title={SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior},
+  author={Mingyue Cui and Linghui Shen and Xingyi Yang},
+  year={2026},
+  eprint={xxxx.xxxxx},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/xxxx.xxxxx}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container narrow">
+      <p>
+        This page was built using the
+        <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>
+        which was adopted from the
+        <a href="https://nerfies.github.io/">Nerfies</a>
+        project page. You are free to borrow the source code of this website, we just ask that you link back to this page in the footer.
+      </p>
+      <p>
+        This website is licensed under a
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
