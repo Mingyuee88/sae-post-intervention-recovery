@@ -8,7 +8,7 @@
   <meta property="og:title" content="SAE Interventions are Unreliable">
   <meta property="og:description" content="Post-intervention recovery shows that SAE feature clamps can suppress behavior without eliminating recoverable paths to it.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="static/images/defense_large.png">
+  <meta property="og:image" content="static/images/overview.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>SAE Interventions are Unreliable</title>
   <link rel="stylesheet" href="static/css/index.css">
@@ -96,26 +96,30 @@
       </div>
     </section>
 
-    <section class="section" id="core-idea">
-      <div class="container split">
-        <div>
-          <p class="section-kicker">Core Idea</p>
-          <h2>Feature-level control is not the same as behavioral completeness.</h2>
-          <p>
-            A selected SAE feature set can be a useful causal handle: clamping it changes behavior.
-            But a stronger question matters for safety: after the clamp is active, is the behavior actually eliminated?
-            Post-intervention recovery tests this by searching from the defended residual state, not by hiding from the monitor before intervention.
-          </p>
-          <p>
-            The recovery path is constrained with encoder-orthogonal projected updates for single-layer settings and feature-map Jacobian projection for cross-layer refusal clamps.
-            This discourages the trivial explanation that recovery simply reopens the clamped features.
-          </p>
-        </div>
-        <figure class="figure-panel core-figure-panel">
-          <img src="static/images/F1.png" alt="Post-intervention recovery framework">
-        </figure>
-      </div>
-    </section>
+<section class="section core-section" id="core">
+  <div class="container split core-split">
+    <div class="core-copy">
+      <p class="section-kicker">Core Idea</p>
+      <h2>Feature-level control is not the same as behavioral completeness.</h2>
+      <p>
+        A selected SAE feature set can be a useful causal handle: clamping it changes behavior.
+        But a stronger question matters for safety: after the clamp is active, is the behavior actually eliminated?
+        Post-intervention recovery tests this by searching from the defended residual state, not by hiding from the monitor before intervention.
+      </p>
+      <p>
+        The recovery path is constrained with encoder-orthogonal projected updates for single-layer settings
+        and feature-map Jacobian projection for cross-layer refusal clamps.
+        This discourages the trivial explanation that recovery simply reopens the clamped features.
+      </p>
+    </div>
+
+    <figure class="figure-panel core-figure-panel">
+      <a href="static/images/F1.png" target="_blank" rel="noopener">
+        <img src="static/images/defense_large.png" alt="Post-intervention recovery framework">
+      </a>
+    </figure>
+  </div>
+</section>
 
     <section class="section results-section" id="results">
       <div class="container">
