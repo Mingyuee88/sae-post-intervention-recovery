@@ -97,66 +97,95 @@
     </section>
 
 <section class="section core-section" id="core">
-  <div class="container split core-split">
-    <div class="core-copy">
-      <p class="section-kicker">Core Idea</p>
-      <h2>Feature-level control is not the same as behavioral completeness.</h2>
-      <p>
-        A selected SAE feature set can be a useful causal handle: clamping it changes behavior.
-        But a stronger question matters for safety: after the clamp is active, is the behavior actually eliminated?
-        Post-intervention recovery tests this by searching from the defended residual state, not by hiding from the monitor before intervention.
-      </p>
-      <p>
-        The recovery path is constrained with encoder-orthogonal projected updates for single-layer settings
-        and feature-map Jacobian projection for cross-layer refusal clamps.
-        This discourages the trivial explanation that recovery simply reopens the clamped features.
-      </p>
+  <div class="container core-wide">
+    <div class="core-text-row">
+      <div class="core-heading-block">
+        <p class="section-kicker">Core Idea</p>
+        <h2>Feature-level control is not the same as behavioral completeness.</h2>
+      </div>
+
+      <div class="core-paragraph-block">
+        <p>
+          A selected SAE feature set can be a useful causal handle: clamping it changes behavior.
+          But a stronger question matters for safety: after the clamp is active, is the behavior actually eliminated?
+          Post-intervention recovery tests this by searching from the defended residual state, not by hiding from the monitor before intervention.
+        </p>
+        <p>
+          The recovery path is constrained with encoder-orthogonal projected updates for single-layer settings
+          and feature-map Jacobian projection for cross-layer refusal clamps.
+          This discourages the trivial explanation that recovery simply reopens the clamped features.
+        </p>
+      </div>
     </div>
 
     <figure class="figure-panel core-figure-panel">
-      <a href="static/images/F1.png" target="_blank" rel="noopener">
-        <img src="static/images/F1.png" alt="Post-intervention recovery framework">
+      <a class="image-zoom-link" href="static/images/defense_large.png" target="_blank" rel="noopener">
+        <img src="static/images/defense_large.png" alt="Post-intervention recovery framework">
       </a>
     </figure>
   </div>
 </section>
 
-    <section class="section results-section" id="results">
-      <div class="container">
-        <p class="section-kicker">Key Results</p>
-        <h2>Suppressed behavior remains recoverable across four settings.</h2>
-        <div class="result-grid">
-          <article class="result-card">
+  <section class="section results-section" id="results">
+    <div class="container results-wide">
+      <p class="section-kicker">Key Results</p>
+      <h2>Suppressed behavior remains recoverable across four settings.</h2>
+  
+      <div class="result-grid">
+        <article class="result-card">
+          <a class="result-image-link" href="static/images/tpp_tradeoff_scatter.png" target="_blank" rel="noopener" aria-label="Open TPP recovery-reactivation trade-off figure">
             <img src="static/images/tpp_tradeoff_scatter.png" alt="TPP recovery-reactivation trade-off">
-            <div class="result-copy">
-              <h3>TPP latent-level recovery</h3>
-              <p>Encoder-projected recovery preserves <strong>74.9%</strong> target-mean recovery while reducing defended-feature reactivation to <strong>0.002</strong>.</p>
-            </div>
-          </article>
-          <article class="result-card">
+          </a>
+          <div class="result-copy">
+            <h3>TPP latent-level recovery</h3>
+            <p>
+              Encoder-projected recovery preserves <strong>74.9%</strong> target-mean recovery
+              while reducing defended-feature reactivation to <strong>0.002</strong>.
+            </p>
+          </div>
+        </article>
+  
+        <article class="result-card">
+          <a class="result-image-link" href="static/images/unlearning_oabd_comparison.png" target="_blank" rel="noopener" aria-label="Open WMDP-Bio unlearning recovery comparison figure">
             <img src="static/images/unlearning_oabd_comparison.png" alt="WMDP-Bio unlearning recovery comparison">
-            <div class="result-copy">
-              <h3>WMDP-Bio unlearning</h3>
-              <p>Recovery restores <strong>90/91</strong> strict valid answer-choice flips while keeping measured clamp-feature drift at zero.</p>
-            </div>
-          </article>
-          <article class="result-card">
+          </a>
+          <div class="result-copy">
+            <h3>WMDP-Bio unlearning</h3>
+            <p>
+              Recovery restores <strong>90/91</strong> strict valid answer-choice flips
+              while keeping measured clamp-feature drift at zero.
+            </p>
+          </div>
+        </article>
+  
+        <article class="result-card">
+          <a class="result-image-link" href="static/images/ioi.png" target="_blank" rel="noopener" aria-label="Open IOI recovery under fixed SAE clamp figure">
             <img src="static/images/ioi.png" alt="IOI recovery under fixed SAE clamp">
-            <div class="result-copy">
-              <h3>IOI circuit-level recovery</h3>
-              <p>Both recovery variants restore all <strong>37</strong> valid IOI flips; encoder projection does so with lower drift and less feature reactivation.</p>
-            </div>
-          </article>
-          <article class="result-card">
+          </a>
+          <div class="result-copy">
+            <h3>IOI circuit-level recovery</h3>
+            <p>
+              Both recovery variants restore all <strong>37</strong> valid IOI flips;
+              encoder projection does so with lower drift and less feature reactivation.
+            </p>
+          </div>
+        </article>
+  
+        <article class="result-card">
+          <a class="result-image-link" href="static/images/refusal_summary.png" target="_blank" rel="noopener" aria-label="Open refusal recovery preservation trade-off figure">
             <img src="static/images/refusal_summary.png" alt="Refusal recovery preservation trade-off">
-            <div class="result-copy">
-              <h3>Refusal recovery</h3>
-              <p>Jacobian-projected recovery restores <strong>23/24</strong> strict-valid AdvBench prompts while keeping defended-feature movement much smaller than suffix baselines.</p>
-            </div>
-          </article>
-        </div>
+          </a>
+          <div class="result-copy">
+            <h3>Refusal recovery</h3>
+            <p>
+              Jacobian-projected recovery restores <strong>23/24</strong> strict-valid AdvBench prompts
+              while keeping defended-feature movement much smaller than suffix baselines.
+            </p>
+          </div>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
     <section class="section attribution-section" id="attribution">
       <div class="container split attribution-split">
