@@ -325,3 +325,63 @@ figcaption {
     padding: 10px;
   }
 }
+.teaser-blank {
+  min-height: 360px;
+  box-shadow: none;
+}
+
+.core-figure-panel img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.citation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.citation-header h2 {
+  margin-bottom: 0;
+}
+
+.copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  color: var(--ink);
+  background: #ffffff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(30, 41, 59, 0.08);
+}
+
+.copy-button:hover {
+  transform: translateY(-1px);
+}
+
+.copy-button.copied {
+  color: #ffffff;
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+@media (max-width: 520px) {
+  .teaser-blank {
+    min-height: 220px;
+  }
+
+  .citation-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
