@@ -111,4 +111,12 @@ This codebase builds on and adapts infrastructure from SAEBench and Obfuscated A
 
 ## Citation
 
-Please cite the accompanying paper if you use this repository. The code repository is https://github.com/Mingyuee88/sae-post-intervention-recovery. Add the paper URL to `CITATION.cff` after it becomes available.
+@misc{cui2026saeinterventionsunreliable,
+      title={SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior},
+      author={Mingyue Cui and Linghui Shen and Xingyi Yang},
+      year={2026},
+      eprint={xxxx.xxxxx},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/xxxx.xxxxx}
+}
