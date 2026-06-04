@@ -42,60 +42,104 @@ For full experiments, install the experiment extras:
 ```bash
 pip install -e ".[experiments,dev]"
 ```
+## External Sources
 
-The quotes around `.[experiments,dev]` are intentional: they work in bash and avoid zsh treating `[]` as a filename pattern. Nothing inside the command needs to be replaced when you run it from the repository root.
+This repository does not redistribute model weights, SAE weights, or benchmark datasets. Download them from the original sources and comply with their terms.
 
-Model weights, SAE weights, and benchmark datasets are not redistributed here. Download them from their official sources and comply with their terms.
+| Used in | Resource | Source |
+| --- | --- | --- |
+| TPP, WMDP-Bio, refusal | Gemma 2 2B base model (`google/gemma-2-2b`) | https://huggingface.co/google/gemma-2-2b |
+| TPP, WMDP-Bio, refusal | Gemma Scope residual SAEs (`google/gemma-scope-2b-pt-res`) | https://huggingface.co/google/gemma-scope-2b-pt-res |
+| IOI | GPT-2 Small (`gpt2` / `openai-community/gpt2`) | https://huggingface.co/openai-community/gpt2 |
+| IOI | GPT-2 Small residual SAEs (`gpt2-small-res-jb`, e.g. `blocks.4.hook_resid_pre`) | https://huggingface.co/jbloom/GPT2-Small-SAEs-Reformatted |
+| TPP | SAEBench official benchmark infrastructure | https://github.com/adamkarvonen/SAEBench |
+| WMDP-Bio | WMDP multiple-choice dataset (`cais/wmdp`, WMDP-Bio split) | https://huggingface.co/datasets/cais/wmdp |
+| Refusal | AdvBench harmful behaviors | https://github.com/llm-attacks/llm-attacks/blob/main/data/advbench/harmful_behaviors.csv |
+| Refusal appendix | HarmBench-Test | https://github.com/centerforaisafety/HarmBench |
+| IOI | Official IOI dataset/code source from Easy-Transformer | https://github.com/redwoodresearch/Easy-Transformer |
 
-## Quick Checks
+## Quick Start
 
-Run lightweight checks from the repository root:
+### 1. TPP latent-level recovery
+
+This experiment uses the external SAEBench TPP pipeline plus the recovery utilities in this repository.
 
 ```bash
-make test
-make inspect-results
-make release-check
+cp configs/tpp.env.example configs/tpp.env
+# Edit configs/tpp.env so SAEBENCH_EXTERNAL_ROOT points to your local SAEBench checkout.
+source configs/tpp.env
+bash scripts/reproduce_tpp.sh
 ```
 
-`make release-check` runs unit tests, scans the public artifact for unsafe files or private strings, and prints a compact summary of sanitized result files.
+Relevant outputs in the released artifact:
 
-## Reproducing Paper Results
+```text
+results/sanitized/neurips_main_table.csv
+results/sanitized/overall_summary_unweighted.csv
+results/sanitized/overall_summary_weighted.csv
+results/sanitized/dataset_summary_unweighted.csv
+```
 
-The scripts in `scripts/` are the intended public entrypoints. Copy the matching config template, edit local paths, source it, then run the reproduction script:
+### 2. WMDP-Bio unlearning recovery
+
+This experiment evaluates output-level recovery on strict WMDP-Bio multiple-choice flips.
+
+```bash
+cp configs/unlearning.env.example configs/unlearning.env
+# Edit configs/unlearning.env so WMDP_BIO_PROMPT_POOL_MANIFEST points to your local manifest.
+source configs/unlearning.env
+bash scripts/reproduce_unlearning.sh
+```
+
+Relevant outputs in the released artifact:
+
+```text
+results/sanitized/unlearning_posthoc_aggregate.json
+manifests/wmdp_bio_strict_valid_91_flips.json
+```
+
+### 3. IOI circuit-level recovery
+
+This experiment uses GPT-2 Small, GPT-2 Small residual SAEs, and the official IOI dataset source from Easy-Transformer.
+
+```bash
+cp configs/ioi.env.example configs/ioi.env
+# Edit configs/ioi.env so IOI_DATASET_SOURCE points to easy_transformer/ioi_dataset.py.
+source configs/ioi.env
+bash scripts/reproduce_ioi.sh
+```
+
+Relevant outputs in the released artifact:
+
+```text
+results/sanitized/ioi_aggregate.json
+results/sanitized/ioi_mode_summary.csv
+results/sanitized/ioi_ioi_per_prompt_mechanism_stats.json
+```
+
+### 4. Refusal recovery and recovery-path attribution
+
+This experiment uses Gemma 2 2B, Gemma Scope residual SAEs, AdvBench strict-valid target pairs, and the final cross-layer Jacobian recovery runner.
 
 ```bash
 cp configs/refusal.env.example configs/refusal.env
-# Edit configs/refusal.env for your local files.
+# Edit configs/refusal.env so ADV_BENCH_STRICT_VALID_TARGET_PAIRS_JSON points to your local target-pairs JSON.
 source configs/refusal.env
 bash scripts/reproduce_refusal.sh
 ```
 
-Available templates:
+Relevant outputs in the released artifact:
 
 ```text
-configs/tpp.env.example
-configs/unlearning.env.example
-configs/ioi.env.example
-configs/refusal.env.example
+results/sanitized/main_refusal_strict_valid_table.json
+results/sanitized/refusal_compare/
+results/sanitized/refusal_recovery_path_attribution_summary.json
+manifests/refusal_advbench_strict_valid_24.json
+manifests/refusal_harmbench_strict_valid_43.json
+manifests/refusal_feature_size_sweep_k_values.json
 ```
 
-For all final command templates, see `configs/final_commands.md`.
-
-For a fast artifact inspection without rerunning GPU experiments:
-
-```bash
-python scripts/inspect_results.py
-```
-
-## Paper Claim to Code Map
-
-| Paper setting | Code | Sanitized artifacts |
-| --- | --- | --- |
-| TPP latent recovery | `experiments/tpp/` | `results/sanitized/neurips_main_table.csv`, `overall_summary_*.csv` |
-| WMDP-Bio unlearning recovery | `experiments/unlearning/` | `results/sanitized/unlearning_posthoc_aggregate.json` |
-| IOI circuit recovery | `experiments/ioi/` | `results/sanitized/ioi_aggregate.json`, `ioi_mode_summary.csv` |
-| Refusal recovery | `experiments/refusal/baseline_refusal_sae_recovery_crosslayer_v4.py` | `results/sanitized/main_refusal_strict_valid_table.json`, `refusal_compare/` |
-| Recovery-path attribution | `experiments/refusal/recovery_path_attribution.py` | `results/sanitized/refusal_recovery_path_attribution_summary.json` |
+For all command templates, see `configs/final_commands.md`.
 
 ## Responsible Release
 
