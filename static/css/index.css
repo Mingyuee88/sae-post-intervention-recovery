@@ -524,3 +524,97 @@ figcaption {
     gap: 0.75rem;
   }
 }
+/* Core Idea layout: enlarge figure and improve readability */
+.core-section {
+  padding: 88px 0;
+}
+
+.core-section .container {
+  width: min(96vw, 1480px);
+  max-width: 1480px;
+}
+
+.core-split {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.78fr) minmax(720px, 1.35fr);
+  gap: 64px;
+  align-items: center;
+}
+
+.core-copy {
+  max-width: 620px;
+}
+
+.core-section h2 {
+  max-width: 620px;
+  margin-bottom: 28px;
+  font-size: clamp(3rem, 4.3vw, 5.15rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.core-section p {
+  max-width: 620px;
+  font-size: clamp(1.05rem, 1.15vw, 1.28rem);
+  line-height: 1.62;
+}
+
+.core-figure-panel {
+  width: 100%;
+  margin: 0;
+  padding: 18px;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.core-figure-panel a {
+  display: block;
+}
+
+.core-figure-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+@media (max-width: 1100px) {
+  .core-split {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .core-copy,
+  .core-section h2,
+  .core-section p {
+    max-width: 820px;
+  }
+
+  .core-figure-panel {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .core-section {
+    padding: 56px 0;
+  }
+
+  .core-section .container {
+    width: min(100% - 28px, 100%);
+  }
+
+  .core-section h2 {
+    font-size: clamp(2.35rem, 12vw, 3.3rem);
+  }
+
+  .core-section p {
+    font-size: 1rem;
+  }
+
+  .core-figure-panel {
+    padding: 10px;
+  }
+}
