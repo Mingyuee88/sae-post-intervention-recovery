@@ -103,8 +103,6 @@ This repository is a diagnostic artifact for evaluating whether SAE intervention
 
 For safety-relevant refusal experiments, the public release includes aggregate statistics, detector labels, prompt IDs, and coarse redacted categories. It does not include full harmful prompts, full harmful completions, raw `samples.json`, answer-record files, private logs, cached model activations, model weights, or SAE weights.
 
-See `SAFETY.md` and `docs/RELEASE_CHECKLIST.md` before publishing a GitHub release.
-
 ## Acknowledgements
 
 This codebase builds on and adapts infrastructure from SAEBench and Obfuscated Activations / OABD. See `ACKNOWLEDGEMENTS.md` and `docs/THIRD_PARTY.md` for details.
