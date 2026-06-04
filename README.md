@@ -1,4 +1,4 @@
-# SAE Interventions are Unreliable: Post-Intervention Recovery
+# SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior
 
 This repository contains the public code and sanitized artifacts for the paper **"SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior"**.
 
