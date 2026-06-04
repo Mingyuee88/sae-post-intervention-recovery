@@ -13,6 +13,47 @@
   <title>SAE Interventions are Unreliable</title>
   <link rel="stylesheet" href="static/css/index.css">
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const copyButton = document.querySelector("[data-copy-target='bibtex-code']");
+    const bibtexCode = document.getElementById("bibtex-code");
+
+    if (!copyButton || !bibtexCode) {
+      return;
+    }
+
+    const originalText = copyButton.textContent;
+
+    const showCopiedState = () => {
+      copyButton.textContent = "Copied!";
+      copyButton.classList.add("copied");
+      window.setTimeout(() => {
+        copyButton.textContent = originalText;
+        copyButton.classList.remove("copied");
+      }, 1800);
+    };
+
+    copyButton.addEventListener("click", async () => {
+      const text = bibtexCode.textContent.trim();
+
+      try {
+        await navigator.clipboard.writeText(text);
+        showCopiedState();
+      } catch (error) {
+        const textArea = document.createElement("textarea");
+        textArea.value = text;
+        textArea.setAttribute("readonly", "");
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        showCopiedState();
+      }
+    });
+  });
+</script>
 <body>
   <main>
     <section class="hero">
@@ -131,19 +172,21 @@
         </figure>
       </div>
     </section>
-
     <section class="section citation-section" id="citation">
       <div class="container narrow">
-        <h2>BibTeX</h2>
-        <pre><code>@misc{cui2026saeinterventionsunreliable,
-  title={SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior},
-  author={Mingyue Cui and Linghui Shen and Xingyi Yang},
-  year={2026},
-  eprint={xxxx.xxxxx},
-  archivePrefix={arXiv},
-  primaryClass={cs.LG},
-  url={https://arxiv.org/abs/xxxx.xxxxx}
-}</code></pre>
+        <div class="citation-header">
+          <h2>BibTeX</h2>
+          <button class="copy-button" type="button" data-copy-target="bibtex-code" aria-label="Copy BibTeX citation">Copy</button>
+        </div>
+        <pre><code id="bibtex-code">@misc{cui2026saeinterventionsunreliable,
+      title={SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior},
+      author={Mingyue Cui and Linghui Shen and Xingyi Yang},
+      year={2026},
+      eprint={xxxx.xxxxx},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/xxxx.xxxxx}
+    }</code></pre>
       </div>
     </section>
   </main>
