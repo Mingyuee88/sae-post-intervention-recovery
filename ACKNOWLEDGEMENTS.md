@@ -12,6 +12,10 @@ This repository contains research code for post-intervention recovery of SAE-bas
   - Used as the basis or reference point for OABD-style soft-suffix baseline comparisons.
   - Scripts in this repository labelled `OABD-style` are experiment adapters for our comparison setting and should not be cited as a clean copy of the upstream implementation.
 
+- **Easy-Transformer / IOI dataset code**: https://github.com/redwoodresearch/Easy-Transformer
+  - Used for the official IOI dataset generator/source (`easy_transformer/ioi_dataset.py`) corresponding to the IOI circuit paper.
+  - Our IOI experiment imports this dataset source from a local external checkout rather than vendoring the upstream repository.
+
 - **SAE Lens / TransformerLens / Gemma Scope**
   - Used for model and SAE loading, activation hooks, and SAE feature computations.
   - Model weights and SAE weights are not redistributed in this repository.
