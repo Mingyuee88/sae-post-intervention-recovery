@@ -1,0 +1,91 @@
+{
+  "dataset": "AdvBench",
+  "split": "feature_size_sweep_full520_preflight",
+  "safety": "K-level aggregate only; each K recomputes its own strict-valid set; no prompts or completions.",
+  "k_values": [
+    {
+      "K": 1,
+      "n_total": 520,
+      "strict_valid": 5,
+      "nonref": 5,
+      "base_like": 4
+    },
+    {
+      "K": 2,
+      "n_total": 520,
+      "strict_valid": 5,
+      "nonref": 5,
+      "base_like": 4
+    },
+    {
+      "K": 3,
+      "n_total": 520,
+      "strict_valid": 5,
+      "nonref": 5,
+      "base_like": 4
+    },
+    {
+      "K": 5,
+      "n_total": 520,
+      "strict_valid": 17,
+      "nonref": 16,
+      "base_like": 15
+    },
+    {
+      "K": 8,
+      "n_total": 520,
+      "strict_valid": 30,
+      "nonref": 30,
+      "base_like": 23
+    },
+    {
+      "K": 10,
+      "n_total": 520,
+      "strict_valid": 36,
+      "nonref": 36,
+      "base_like": 27
+    },
+    {
+      "K": 15,
+      "n_total": 520,
+      "strict_valid": 45,
+      "nonref": 45,
+      "base_like": 34
+    },
+    {
+      "K": 20,
+      "n_total": 520,
+      "strict_valid": 45,
+      "nonref": 42,
+      "base_like": 31
+    },
+    {
+      "K": 30,
+      "n_total": 520,
+      "strict_valid": 59,
+      "nonref": 58,
+      "base_like": 28
+    },
+    {
+      "K": 40,
+      "n_total": 520,
+      "strict_valid": 62,
+      "nonref": 61,
+      "base_like": 23
+    },
+    {
+      "K": 50,
+      "n_total": 520,
+      "strict_valid": 64,
+      "nonref": 64,
+      "base_like": 20
+    },
+    {
+      "K": 61,
+      "n_total": 520,
+      "strict_valid": 64,
+      "nonref": 64,
+      "base_like": 8
+    }
+  ]
+}

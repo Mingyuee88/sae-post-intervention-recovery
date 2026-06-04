@@ -1,0 +1,5 @@
+dataset_preset,target_label_name,n,total_metric,intended_diff_only,avg_unintended_diff_only,dataset_label
+amazon_reviews,Musical_Instruments,500,0.3842500001192093,0.3930000066757202,0.0087500065565109,Amazon Reviews
+bias_in_bios_set1,dentist,500,0.4667500555515289,0.4820000529289245,0.0152499973773956,Bias in Bios 1
+bias_in_bios_set2,journalist,500,0.4297500103712082,0.4399999976158142,0.010249987244606,Bias in Bios 2
+bias_in_bios_set3,surgeon,500,0.4267500340938568,0.4520000219345093,0.0252499878406524,Bias in Bios 3

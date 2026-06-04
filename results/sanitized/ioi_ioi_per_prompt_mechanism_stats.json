@@ -1,0 +1,13 @@
+{
+  "n_valid_flips": 37,
+  "none_mean_recovered_logit_diff_valid": 71.94890398592563,
+  "encoder_mean_recovered_logit_diff_valid": 71.44001275139885,
+  "none_mean_act_drift_valid": 2.47146171170312,
+  "encoder_mean_act_drift_valid": 0.7833089796272484,
+  "none_mean_reactivation_valid": 0.04116735399344095,
+  "encoder_mean_reactivation_valid": 0.015596505596505597,
+  "encoder_lower_act_drift_count": 28,
+  "encoder_lower_reactivation_count": 10,
+  "none_zero_reactivation_count": 24,
+  "encoder_zero_reactivation_count": 30
+}

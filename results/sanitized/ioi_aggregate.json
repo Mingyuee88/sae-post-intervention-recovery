@@ -1,0 +1,62 @@
+{
+  "config": {
+    "model_name": "gpt2",
+    "sae_release": "gpt2-small-res-jb",
+    "layer": 4,
+    "hook_name": "blocks.4.hook_resid_pre",
+    "device": "cuda",
+    "ioi_source": "<internal_path_redacted>",
+    "prompt_type": "BABA",
+    "n_prompts": 64,
+    "nb_templates": 1,
+    "topk_features": 64,
+    "clamp_multiplier": 5.0,
+    "modes": [
+      "none",
+      "encoder"
+    ],
+    "num_steps": 100,
+    "lr": 0.1,
+    "max_delta_norm": 20.0,
+    "lambda_act": 0.0,
+    "lambda_decode": 0.0,
+    "ridge": 0.0001,
+    "seed": 0
+  },
+  "aggregate_by_mode": {
+    "none": {
+      "mode": "none",
+      "n_prompts": 64,
+      "n_valid_flips": 37,
+      "n_recovered_success": 37,
+      "recovery_rate_over_valid": 1.0,
+      "mean_recovered_logit_diff_all": 72.49565732479095,
+      "mean_recovered_logit_diff_valid": 71.94890398592563,
+      "mean_final_act_drift_l2_all": 1.8111287038773298,
+      "mean_final_act_drift_l2_valid": 2.47146171170312,
+      "mean_final_decode_drift_l2_all": 2.276987187564373,
+      "mean_final_decode_drift_l2_valid": 3.2615878420907096,
+      "mean_reactivated_fraction_all": 0.021978687931550667,
+      "mean_reactivated_fraction_valid": 0.03218618518597371,
+      "mean_reactivated_positive_fraction_within_eligible_all": 0.02736724665732818,
+      "mean_reactivated_positive_fraction_within_eligible_valid": 0.04116735399344095
+    },
+    "encoder": {
+      "mode": "encoder",
+      "n_prompts": 64,
+      "n_valid_flips": 37,
+      "n_recovered_success": 37,
+      "recovery_rate_over_valid": 1.0,
+      "mean_recovered_logit_diff_all": 72.3047126531601,
+      "mean_recovered_logit_diff_valid": 71.44001275139885,
+      "mean_final_act_drift_l2_all": 0.6718655847944319,
+      "mean_final_act_drift_l2_valid": 0.7833089796272484,
+      "mean_final_decode_drift_l2_all": 0.8561519958020654,
+      "mean_final_decode_drift_l2_valid": 0.9722252500218314,
+      "mean_reactivated_fraction_all": 0.010114648437593132,
+      "mean_reactivated_fraction_valid": 0.012839691512085296,
+      "mean_reactivated_positive_fraction_within_eligible_all": 0.011873872655122655,
+      "mean_reactivated_positive_fraction_within_eligible_valid": 0.015596505596505597
+    }
+  }
+}

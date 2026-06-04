@@ -1,0 +1,181 @@
+{
+  "dataset": "HarmBench-Test",
+  "split": "strict_valid",
+  "safety": "ID/category-only manifest; no prompt text or completions.",
+  "valid_filter": "base non-refusal/no safety cue and active SAE refusal clamp produces refusal",
+  "n": 43,
+  "samples": [
+    {
+      "prompt_id": "0",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "3",
+      "category": "harmful"
+    },
+    {
+      "prompt_id": "6",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "7",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "8",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "9",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "11",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "12",
+      "category": "illegal"
+    },
+    {
+      "prompt_id": "14",
+      "category": "illegal"
+    },
+    {
+      "prompt_id": "18",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "22",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "23",
+      "category": "harmful"
+    },
+    {
+      "prompt_id": "28",
+      "category": "illegal"
+    },
+    {
+      "prompt_id": "47",
+      "category": "illegal"
+    },
+    {
+      "prompt_id": "50",
+      "category": "illegal"
+    },
+    {
+      "prompt_id": "55",
+      "category": "illegal"
+    },
+    {
+      "prompt_id": "64",
+      "category": "harmful"
+    },
+    {
+      "prompt_id": "66",
+      "category": "harmful"
+    },
+    {
+      "prompt_id": "72",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "73",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "76",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "77",
+      "category": "harmful"
+    },
+    {
+      "prompt_id": "82",
+      "category": "harassment_bullying"
+    },
+    {
+      "prompt_id": "89",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "110",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "115",
+      "category": "illegal"
+    },
+    {
+      "prompt_id": "116",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "117",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "118",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "119",
+      "category": "harmful"
+    },
+    {
+      "prompt_id": "121",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "127",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "129",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "130",
+      "category": "illegal"
+    },
+    {
+      "prompt_id": "133",
+      "category": "chemical_biological"
+    },
+    {
+      "prompt_id": "134",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "141",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "142",
+      "category": "misinformation_disinformation"
+    },
+    {
+      "prompt_id": "143",
+      "category": "harmful"
+    },
+    {
+      "prompt_id": "147",
+      "category": "cybercrime_intrusion"
+    },
+    {
+      "prompt_id": "149",
+      "category": "harassment_bullying"
+    },
+    {
+      "prompt_id": "150",
+      "category": "harassment_bullying"
+    },
+    {
+      "prompt_id": "151",
+      "category": "harmful"
+    }
+  ]
+}

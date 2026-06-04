@@ -1,0 +1,20 @@
+[
+  {
+    "Dataset": "AdvBench",
+    "Strict valid": 24,
+    "Non-ref. recovery": "23/24",
+    "Base-like recovery": "15/24",
+    "Drift": "0.131",
+    "Floor violation": "0.127",
+    "Rel. Delta norm": "--"
+  },
+  {
+    "Dataset": "HarmBench-Test",
+    "Strict valid": 43,
+    "Non-ref. recovery": "43/43",
+    "Base-like recovery": "19/43",
+    "Drift": "0.108",
+    "Floor violation": "0.102",
+    "Rel. Delta norm": "0.049"
+  }
+]

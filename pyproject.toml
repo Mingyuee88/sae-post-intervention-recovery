@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sae-post-intervention-recovery"
+version = "0.1.0"
+description = "Research code for post-intervention recovery diagnostics of SAE-based interventions."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Mingyue Cui" },
+  { name = "Linghui Shen" },
+  { name = "Xingyi Yang" },
+]
+dependencies = [
+  "numpy",
+  "pandas",
+  "torch",
+  "tqdm",
+]
+
+[project.optional-dependencies]
+experiments = [
+  "datasets",
+  "matplotlib",
+  "scipy",
+  "sae-lens",
+  "transformer-lens",
+]
+dev = [
+  "pytest",
+]
+
+[project.urls]
+Repository = "https://github.com/Mingyuee88/sae-post-intervention-recovery"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["sae_bench*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-q"

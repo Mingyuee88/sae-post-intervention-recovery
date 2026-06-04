@@ -1,0 +1,8 @@
+{
+  "note": "Exact residual-state-normalized delta is unavailable for older AdvBench runs because final deltas and h0 norms were not persisted. The reported relative value uses the defended feature-state norm inferred from drift l2/relative_l2.",
+  "n_rows": 67,
+  "mean_delta_norm": 39.99999491373698,
+  "median_delta_norm": 39.99999809265137,
+  "mean_delta_norm_relative_to_defended_feature_state": 0.153279718247788,
+  "median_delta_norm_relative_to_defended_feature_state": 0.09096440685928617
+}

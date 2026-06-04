@@ -1,0 +1,19 @@
+name: sae-intervention-recovery
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - pytest
+  - pip:
+      - transformer-lens
+      - sae-lens
+      - datasets
+      - tqdm

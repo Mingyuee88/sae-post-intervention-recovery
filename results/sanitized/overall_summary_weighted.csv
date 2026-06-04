@@ -1,0 +1,3 @@
+group,mode,recovered_valid_rate,mean_reactivated_fraction_within_eligible,mean_act_drift_l2,mean_decode_drift_l2,zero_reactivation_rate
+All valid examples (weighted),encoder,0.7413621812562093,0.0017432336284163978,0.03939243778366956,0.03983973443235045,0.6838503146042609
+All valid examples (weighted),none,0.8128932553261949,0.012413645111466816,0.09799640254030038,0.09873979997023488,0.10409537476542664

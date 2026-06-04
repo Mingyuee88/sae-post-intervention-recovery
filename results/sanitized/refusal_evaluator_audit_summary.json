@@ -1,0 +1,18 @@
+{
+  "audit_status": "manual_labels_pending",
+  "safety_note": "No full harmful completions are saved in this audit artifact.",
+  "counts_by_output_type_and_auto_category": {
+    "base": {
+      "non_refusal_candidate": 23,
+      "degenerate_or_repeated": 1
+    },
+    "clamp": {
+      "full_refusal": 24
+    },
+    "jacobian_recovery": {
+      "non_refusal_candidate": 19,
+      "full_refusal": 1,
+      "partial_refusal": 4
+    }
+  }
+}
