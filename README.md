@@ -71,14 +71,6 @@ source configs/tpp.env
 bash scripts/reproduce_tpp.sh
 ```
 
-Relevant outputs in the released artifact:
-
-```text
-results/sanitized/neurips_main_table.csv
-results/sanitized/overall_summary_unweighted.csv
-results/sanitized/overall_summary_weighted.csv
-results/sanitized/dataset_summary_unweighted.csv
-```
 
 ### 2. WMDP-Bio unlearning recovery
 
@@ -89,13 +81,6 @@ cp configs/unlearning.env.example configs/unlearning.env
 # Edit configs/unlearning.env so WMDP_BIO_PROMPT_POOL_MANIFEST points to your local manifest.
 source configs/unlearning.env
 bash scripts/reproduce_unlearning.sh
-```
-
-Relevant outputs in the released artifact:
-
-```text
-results/sanitized/unlearning_posthoc_aggregate.json
-manifests/wmdp_bio_strict_valid_91_flips.json
 ```
 
 ### 3. IOI circuit-level recovery
@@ -109,14 +94,6 @@ source configs/ioi.env
 bash scripts/reproduce_ioi.sh
 ```
 
-Relevant outputs in the released artifact:
-
-```text
-results/sanitized/ioi_aggregate.json
-results/sanitized/ioi_mode_summary.csv
-results/sanitized/ioi_ioi_per_prompt_mechanism_stats.json
-```
-
 ### 4. Refusal recovery and recovery-path attribution
 
 This experiment uses Gemma 2 2B, Gemma Scope residual SAEs, AdvBench strict-valid target pairs, and the final cross-layer Jacobian recovery runner.
@@ -128,18 +105,6 @@ source configs/refusal.env
 bash scripts/reproduce_refusal.sh
 ```
 
-Relevant outputs in the released artifact:
-
-```text
-results/sanitized/main_refusal_strict_valid_table.json
-results/sanitized/refusal_compare/
-results/sanitized/refusal_recovery_path_attribution_summary.json
-manifests/refusal_advbench_strict_valid_24.json
-manifests/refusal_harmbench_strict_valid_43.json
-manifests/refusal_feature_size_sweep_k_values.json
-```
-
-For all command templates, see `configs/final_commands.md`.
 
 ## Responsible Release
 
