@@ -74,9 +74,7 @@ This repository does not redistribute model weights, SAE weights, or benchmark d
 
 ## Quick Start
 
-![Experiment map](assets/experiment_map.svg)
-
-### 1. TPP latent-level recovery
+### 1. Targeted Probe Perturbation (TPP) latent-level recovery
 
 This experiment uses the external SAEBench TPP pipeline plus the recovery utilities in this repository.
 
@@ -99,7 +97,7 @@ source configs/unlearning.env
 bash scripts/reproduce_unlearning.sh
 ```
 
-### 3. IOI circuit-level recovery
+### 3. Indirect Object Identification (IOI) circuit-level recovery
 
 This experiment uses GPT-2 Small, GPT-2 Small residual SAEs, and the official IOI dataset source from Easy-Transformer.
 
@@ -130,7 +128,7 @@ For safety-relevant refusal experiments, the public release includes aggregate s
 
 ## Acknowledgements
 
-This codebase builds on and adapts infrastructure from SAEBench, Obfuscated Activations / OABD, and the Easy-Transformer IOI dataset code. See `ACKNOWLEDGEMENTS.md` for details.
+This codebase builds on and adapts infrastructure from SAEBench, Obfuscated Activations / OABD, and the Easy-Transformer IOI dataset code. See `[ACKNOWLEDGEMENTS.md](https://github.com/Mingyuee88/sae-post-intervention-recovery/blob/main/ACKNOWLEDGEMENTS.md)` for details.
 
 ## Citation
 ```bibtex
