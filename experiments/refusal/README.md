@@ -21,7 +21,3 @@ bash scripts/reproduce_refusal.sh
 ```
 
 Generated outputs go to `runs/refusal/` by default and are ignored by git.
-
-## Safety notes
-
-These scripts can generate full model outputs when run locally. Do not commit raw refusal outputs, full harmful prompts, full completions, answer records, preflight rows, or sample files. Public results should be aggregated or redacted as in `results/sanitized/` and `manifests/`.
