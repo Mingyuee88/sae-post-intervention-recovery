@@ -1,6 +1,6 @@
 # SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior
 
-<img width="1859" height="846" alt="image" src="https://github.com/user-attachments/assets/f5fb71ec-24d7-42a8-9334-2f0bfd20db32" />
+<img width="1012" height="432" alt="image" src="https://github.com/user-attachments/assets/43ef494b-307f-4923-a184-7d2548f21d8c" />
 
 
 > **SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior**  
