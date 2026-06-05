@@ -128,7 +128,7 @@ For safety-relevant refusal experiments, the public release includes aggregate s
 
 ## Acknowledgements
 
-This codebase builds on and adapts infrastructure from SAEBench, Obfuscated Activations / OABD, and the Easy-Transformer IOI dataset code. See `[ACKNOWLEDGEMENTS.md](https://github.com/Mingyuee88/sae-post-intervention-recovery/blob/main/ACKNOWLEDGEMENTS.md)` for details.
+This codebase builds on and adapts infrastructure from SAEBench, Obfuscated Activations / OABD, and the Easy-Transformer IOI dataset code. See [ACKNOWLEDGEMENTS.md](https://github.com/Mingyuee88/sae-post-intervention-recovery/blob/main/ACKNOWLEDGEMENTS.md) for details.
 
 ## Citation
 ```bibtex
