@@ -6,7 +6,24 @@
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://mingyuee88.github.io/sae-post-intervention-recovery/)
 [![Code](https://img.shields.io/badge/Code-GitHub-black.svg)](https://github.com/Mingyuee88/sae-post-intervention-recovery)
 
+<br>
+
+
+
+<video src="https://mingyuee88.github.io/sae-post-intervention-recovery/static/images/Animation.mp4" width="80%" autoplay loop muted playsinline controls>
+
+  Your browser does not support the video tag.
+
+</video>
+
+
+
 </div>
+
+
+
+<br>
+
 
 > **SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior**  
 > [Mingyue Cui](https://github.com/Mingyuee88), [Linghui Shen](https://github.com/LinghuiiShen), [Xingyi Yang](https://adamdad.github.io/)  
