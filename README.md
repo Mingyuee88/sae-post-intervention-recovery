@@ -1,12 +1,16 @@
+<div align="center">
+      
 # SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior
+[![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/xxxx.xxxxx)
+[![Paper](https://img.shields.io/badge/Paper-PDF-orange.svg)](https://mingyuee88.github.io/sae-post-intervention-recovery/static/pdf/SAE_preprint.pdf)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://mingyuee88.github.io/sae-post-intervention-recovery/)
+[![Code](https://img.shields.io/badge/Code-GitHub-black.svg)](https://github.com/Mingyuee88/sae-post-intervention-recovery)
 
-<img width="1012" height="432" alt="image" src="https://github.com/user-attachments/assets/43ef494b-307f-4923-a184-7d2548f21d8c" />
-
+</div>
 
 > **SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior**  
 > [Mingyue Cui](https://github.com/Mingyuee88), [Linghui Shen](https://github.com/LinghuiiShen), [Xingyi Yang](https://adamdad.github.io/)  
 > The Hong Kong Polytechnic University  
-> 🔥 [[Arxiv]](https://arxiv.org/abs/xxxx.xxxxx) | 📄 [[Paper]](https://mingyuee88.github.io/sae-post-intervention-recovery/static/pdf/SAE_preprint.pdf) | 💻 [[Project Page]](https://mingyuee88.github.io/sae-post-intervention-recovery/)
 
 This repository contains the public code and sanitized artifacts for the paper **"SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior"**.
 
