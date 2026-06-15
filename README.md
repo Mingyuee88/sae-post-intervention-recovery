@@ -24,7 +24,9 @@ This repository contains the public code and sanitized artifacts for the paper *
 The central question is: after an SAE feature clamp has already suppressed a behavior, can the behavior still be recovered from the defended residual state while the clamped SAE features remain close to their defended values?
 
 In short, this project tests whether SAE feature interventions form reliable behavioral bottlenecks. Across latent-level, unlearning, circuit, and refusal settings, we intervene on model activations, then ask whether a constrained recovery direction can restore the suppressed behavior without simply undoing the clamped SAE features.
-<img width="770" height="469" alt="image" src="https://github.com/user-attachments/assets/7cf7908e-14ed-4de5-ad3b-29165bdaa811" />
+<div align="center">
+  <img width="90%" alt="image" src="https://github.com/user-attachments/assets/7cf7908e-14ed-4de5-ad3b-29165bdaa811" />
+</div>
 
 
 
