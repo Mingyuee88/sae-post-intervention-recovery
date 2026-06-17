@@ -18,8 +18,6 @@
 > [Mingyue Cui](https://github.com/Mingyuee88), [Linghui Shen](https://github.com/LinghuiiShen), [Xingyi Yang](https://adamdad.github.io/)  
 > The Hong Kong Polytechnic University  
 
-This repository contains the public code and sanitized artifacts for the paper **"SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior"**.
-
 The central question is: after an SAE feature clamp has already suppressed a behavior, can the behavior still be recovered from the defended residual state while the clamped SAE features remain close to their defended values?
 
 In short, this project tests whether SAE feature interventions form reliable behavioral bottlenecks. Across latent-level, unlearning, circuit, and refusal settings, we intervene on model activations, then ask whether a constrained recovery direction can restore the suppressed behavior without simply undoing the clamped SAE features.
@@ -34,22 +32,21 @@ In short, this project tests whether SAE feature interventions form reliable beh
 - Shared recovery utilities for SAE-clamped residual states.
 - Encoder-orthogonal projected recovery for single-layer interventions.
 - Cross-layer Jacobian-projected recovery for refusal-feature clamps.
-- Final experiment code for TPP, WMDP-Bio unlearning, IOI, and refusal recovery.
+- Experiment code for TPP, WMDP-Bio unlearning, IOI, and refusal recovery.
 - Sanitized aggregate results and redacted manifests used by the paper.
 
 ## Repository Map
 
 ```text
 src/sae_bench/recovery_core/      Shared recovery and projection utilities
-experiments/tpp/                  Final TPP adapter and paper-asset helper
-experiments/unlearning/           Final WMDP-Bio recovery, post-hoc, and budget diagnostic code
-experiments/ioi/                  Final IOI recovery script
-experiments/refusal/              Final refusal recovery, cross-layer projection, OABD adapter, attribution
+experiments/tpp/                  TPP adapter and paper-asset helper
+experiments/unlearning/           WMDP-Bio recovery, post-hoc, and budget diagnostic code
+experiments/ioi/                  IOI recovery script
+experiments/refusal/               Refusal recovery, cross-layer projection, OABD adapter, attribution
 configs/                          Environment-variable templates for local paths and outputs
 scripts/                          Reproduction wrappers and release checks
 results/sanitized/                Aggregate metrics only
 manifests/                        ID-only or redacted strict-valid manifests
-docs/                             Release notes, third-party handling, artifact policy
 ```
 
 ## Installation
@@ -140,7 +137,7 @@ For safety-relevant refusal experiments, the public release includes aggregate s
 
 ## Acknowledgements
 
-This codebase builds on and adapts infrastructure from SAEBench, Obfuscated Activations / OABD, and the Easy-Transformer IOI dataset code. See [ACKNOWLEDGEMENTS.md](https://github.com/Mingyuee88/sae-post-intervention-recovery/blob/main/ACKNOWLEDGEMENTS.md) for details.
+This codebase builds on and adapts infrastructure from SAEBench, Obfuscated Activations (OABD), and the Easy-Transformer IOI dataset code. See [ACKNOWLEDGEMENTS.md](https://github.com/Mingyuee88/sae-post-intervention-recovery/blob/main/ACKNOWLEDGEMENTS.md) for details.
 
 ## Citation
 ```bibtex
