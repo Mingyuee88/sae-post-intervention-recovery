@@ -650,15 +650,10 @@ figcaption {
 }
 
 .icon-button-row .arxiv-icon {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3.2;
-}
-
-.icon-button-row .arxiv-accent {
-  stroke-width: 1.35;
+  width: 25px;
+  height: 34px;
+  fill: currentColor;
+  stroke: none;
 }
 
 .icon-button-row .github-icon {
