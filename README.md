@@ -1,7 +1,7 @@
 <div align="center">
       
 # SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior
-[![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/xxxx.xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/abs/2606.18322)
 [![Paper](https://img.shields.io/badge/Paper-PDF-orange.svg)](https://mingyuee88.github.io/sae-post-intervention-recovery/static/pdf/SAE_preprint.pdf)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://mingyuee88.github.io/sae-post-intervention-recovery/)
 <br>
@@ -141,13 +141,13 @@ This codebase builds on and adapts infrastructure from SAEBench, Obfuscated Acti
 
 ## Citation
 ```bibtex
-@misc{cui2026saeinterventionsunreliable,
-      title={SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior},
+@misc{cui2026saeinterventionsunreliablepostintervention,
+      title={SAE Interventions are Unreliable: Post-Intervention Recovery of Suppressed Behavior}, 
       author={Mingyue Cui and Linghui Shen and Xingyi Yang},
       year={2026},
-      eprint={xxxx.xxxxx},
+      eprint={2606.18322},
       archivePrefix={arXiv},
       primaryClass={cs.LG},
-      url={https://arxiv.org/abs/xxxx.xxxxx}
+      url={https://arxiv.org/abs/2606.18322}, 
 }
 ```
