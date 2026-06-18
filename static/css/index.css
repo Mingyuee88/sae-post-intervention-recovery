@@ -595,7 +595,7 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   margin: 28px 0 30px;
   flex-wrap: wrap;
 }
@@ -605,24 +605,26 @@ figcaption {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 16px 30px;
-  min-width: 170px;
-  border: 1.5px solid #cfd6e4;
+  min-width: 158px;
+  min-height: 54px;
+  padding: 14px 26px;
+  border: 1.5px solid #d8deea;
   border-radius: 999px;
-  background: #ffffff;
+  background: #fffdfa;
   color: #151823;
   text-decoration: none !important;
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: 0.03em;
-  box-shadow: 0 6px 18px rgba(30, 41, 59, 0.08);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 18px rgba(30, 41, 59, 0.07);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
 .icon-button-row .icon-button:hover {
   transform: translateY(-2px);
-  border-color: #b8c4d8;
+  border-color: #bac6d9;
+  background: #ffffff;
   box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
   text-decoration: none !important;
 }
@@ -635,39 +637,87 @@ figcaption {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
 }
 
-.icon-button-row .icon-button i {
-  line-height: 1;
+.icon-button-row .project-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: currentColor;
 }
 
-.icon-button-row .icon-button .ai-arxiv {
-  font-size: 1.7rem;
+.icon-button-row .arxiv-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3.2;
 }
 
-.icon-button-row .icon-button .fa-github {
-  font-size: 1.6rem;
+.icon-button-row .arxiv-accent {
+  stroke-width: 1.35;
+}
+
+.icon-button-row .github-icon {
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 640px) {
+  .hero {
+    padding-top: 48px;
+  }
+
+  .eyebrow {
+    max-width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    line-height: 1.55;
+  }
+
+  h1 {
+    max-width: 18rem;
+    font-size: clamp(1.72rem, 7.2vw, 2rem);
+    line-height: 1.08;
+  }
+
+  h1 span {
+    font-size: 0.72em;
+  }
+
+  .authors {
+    max-width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+
+  .affiliation {
+    max-width: 18rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .icon-button-row {
-    gap: 12px;
+    gap: 10px;
   }
 
   .icon-button-row .icon-button {
-    min-width: 150px;
-    padding: 14px 22px;
-    font-size: 0.98rem;
+    min-width: 132px;
+    min-height: 48px;
+    padding: 11px 16px;
+    font-size: 0.94rem;
   }
 
-  .icon-button-row .icon-button .ai-arxiv {
-    font-size: 1.55rem;
-  }
-
-  .icon-button-row .icon-button .fa-github {
-    font-size: 1.45rem;
+  .icon-button-row .icon-wrap {
+    width: 27px;
+    height: 27px;
   }
 }
