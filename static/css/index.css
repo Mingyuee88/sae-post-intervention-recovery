@@ -585,4 +585,57 @@ figcaption {
     flex-direction: column;
     gap: 0.75rem;
   }
+  .icon-button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+  margin-top: 32px;
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: #111827;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.icon-button i {
+  font-size: 48px;
+  line-height: 1;
+}
+
+.icon-button .ai-arxiv {
+  font-size: 52px;
+}
+
+.icon-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.78;
+}
+
+@media (max-width: 640px) {
+  .icon-button-row {
+    gap: 28px;
+  }
+
+  .icon-button {
+    font-size: 22px;
+    gap: 10px;
+  }
+
+  .icon-button i {
+    font-size: 40px;
+  }
+
+  .icon-button .ai-arxiv {
+    font-size: 44px;
+  }
+}
 }
